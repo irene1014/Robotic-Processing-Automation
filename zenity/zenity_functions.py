@@ -1,4 +1,5 @@
 import os
+import locale
 import warnings
 import subprocess
 
@@ -23,7 +24,8 @@ def zen_func(op, parameter=None, value=None):
                 else:
                     cmd.append(parameter[i])
         po = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=None)
-        t = po.communicate()[0].decode("utf-8")
+        os_encoding = locale.getpreferredencoding()
+        t = po.communicate()[0].decode(os_encoding)
         print(t.rstrip('\r\n'), end='')
         return 0
     except Exception as err:
