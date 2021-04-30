@@ -11,4 +11,7 @@ Kedro is an open-source Python framework which produces the source of data pipel
 
 
 ### 3. BeautifulSoup 
-Extract a table from html and covert it into a csv file 
+Extract a table from html and covert it into a csv file. 
+
+### 4. Openpyxl
+Explain the error of 'data only' option in openpyxl and provide a proper solution. 
